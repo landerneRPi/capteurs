@@ -30,7 +30,15 @@ $ sudo vi /etc/modules
 w1-therm
 w1-gpio pullup=1
 ...
+
+# ajouter l'activation 1 wire gpio dans la configuration du démarrage de la carte
+$ sudo vi /boot/config.txt
+...
+dtoverlay=w1-gpio
+...
 ```
+
+Redémarrer le Raspberry Pi.
 
 Tester le montage:
 ```bash
